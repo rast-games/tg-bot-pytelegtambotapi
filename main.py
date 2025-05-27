@@ -88,7 +88,7 @@ def give_question(message):
             if response:
                 j_answer = response.json()
                 answer = j_answer["choices"][0]["message"]["content"]
-                thinking = answer.split("<think>")[1].split(r"</think>")[0]
+                thinking = answer.split(r"</think>")[0]
                 answer_for_user = answer.split(r"</think>")[1]
                 limit = len(answer) + len(thinking) + 3
                 count = 1
